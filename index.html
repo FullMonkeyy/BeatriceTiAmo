@@ -1,6 +1,26 @@
 <html>
 <head>
 
+    <style>
+
+        .divi{
+
+            width:100px;
+            height:40px;
+            border-radius: 10px 10px 10px 10px;
+            margin:auto;
+
+        }
+        #main{
+
+            width:100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+
+        }
+
+    </style>
 
 
 
@@ -12,15 +32,18 @@
 <script>
 
     var stringa=""
-
+    var divo;
+    body=document.getElementById("main")
     for(let i=1;i<=10000;i++){
 
-        stringa=stringa+"Ti amo Beatrice "+i+" ❤️<br>";
-
+        divo=document.createElement("div")
+        divo.innerHTML="Ti amo Beatrice "+i+" ❤️"
+        divo.setAttribute("class","divi");
+        body.appendChild(divo)
 
     }
 
-    document.getElementById("main").innerHTML=stringa;
+  
 
 </script>
 </html>
